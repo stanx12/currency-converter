@@ -5,10 +5,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
   steps:
-    - name: Checkout branch
-      uses: actions/checkout@main
-      with:
-        path: main
+    - uses: actions/checkout@main
 
     - name: Set up Node.js
       uses: actions/setup-node@v1
