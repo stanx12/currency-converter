@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { TouchableOpacity, Text, StyleSheet } from "react-native";
 
-import colors from "../constants/colors";
+import colors from "../../constants/colors";
 
 
 const styles = StyleSheet.create({
@@ -33,4 +33,4 @@ RowItem.propTypes = {
   rightIcon: PropTypes.node.isRequired
 };
 
-export default RowItem
+export default RowItem;

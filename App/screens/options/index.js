@@ -2,14 +2,13 @@ import React from "react";
 import { SafeAreaView, ScrollView, Linking, Alert } from "react-native";
 import { Entypo } from "@expo/vector-icons";
 
-import colors from "../constants/colors";
-import RowItem from "../components/row-item";
-import RowSeparator from "../components/row-separator";
+import colors from "../../constants/colors";
+import { RowItem, RowSeparator } from "../../components";
 
 export default () => {
   const openLink = (url) =>
     Linking.openURL(url).catch(() => {
-      Alert.alert("Sorry something went wrong.", "Please try again later.")
+      Alert.alert("Sorry something went wrong.", "Please try again later.");
     });
 
   return (
