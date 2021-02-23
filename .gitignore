@@ -9,6 +9,9 @@ npm-debug.*
 *.orig.*
 web-build/
 .expo-shared/
+coverage/\*\*/*
+__snapshots__/
+coverage/
 
 # macOS
 .DS_Store
