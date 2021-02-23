@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export const KeyboardSpacer = ({ style, onToggle = () => null }) => {
+export default ({ style, onToggle = () => null }) => {
   const [keyboardSpace, setKeyboardSpace] = useState(0);
 
   useEffect(() => {

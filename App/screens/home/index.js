@@ -10,10 +10,10 @@ import {
 } from "react-native";
 import { format } from "date-fns";
 
-import colors from "../constants/colors";
-import { ConversionInput } from "../components/conversion-input";
-import { Button } from "../components/button";
-import { KeyboardSpacer } from "../components/keyboard-spacer";
+import colors from "../../constants/colors";
+import background from "../../assets/images/background.png";
+import logo from "../../assets/images/logo.png";
+import { ConversionInput, Button, KeyboardSpacer } from "../../components";
 
 const screen = Dimensions.get("window");
 
@@ -71,12 +71,12 @@ export default () => {
         <View style={styles.content}>
           <View style={styles.logoContainer}>
             <Image
-              source={require("../assets/images/background.png")}
+              source={background}
               style={styles.logoBackground}
               resizeMode="contain"
             />
             <Image
-              source={require("../assets/images/logo.png")}
+              source={logo}
               style={styles.logo}
               resizeMode="contain"
             />
