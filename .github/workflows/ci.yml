@@ -2,10 +2,13 @@ name: Continuos Integration
 on: [push, pull_request]
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
+
   steps:
-    - uses: actions/checkout@main
+    - uses: actions/checkout@v2
+      with:
+        ref: main
 
     - name: Set up Node.js
       uses: actions/setup-node@v1
