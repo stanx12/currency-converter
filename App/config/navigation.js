@@ -4,13 +4,13 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import { Home, Options } from "../screens";
 
-const MainStack = createStackNavigator();
+const { Screen, Navigator } = createStackNavigator();
 
 const MainStackScreen = () => (
-  <MainStack.Navigator>
-    <MainStack.Screen name="Home" component={Home} options={{ headerShown:false }} />
-    <MainStack.Screen name="Options" component={Options} />
-  </MainStack.Navigator>
+  <Navigator>
+    <Screen name="Home" component={Home} options={{ headerShown:false }} />
+    <Screen name="Options" component={Options} />
+  </Navigator>
 );
 
 export default () => (
