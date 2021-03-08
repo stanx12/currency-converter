@@ -17,7 +17,6 @@ describe("<App />", () => {
 
   it("should renders correctly", () => {
     const tree = renderer.create(<App />).toJSON();
-
     expect(tree).toMatchSnapshot();
   });
 });
