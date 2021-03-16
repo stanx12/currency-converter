@@ -30,7 +30,6 @@ const RowItem = ({ rightIcon, text, onPress }) => {
 
 RowItem.propTypes = {
   text: PropTypes.string.isRequired,
-  rightIcon: PropTypes.node.isRequired
 };
 
 export default RowItem;

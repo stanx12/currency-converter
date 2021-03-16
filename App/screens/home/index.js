@@ -70,12 +70,15 @@ export default ({ navigation }) => {
   const date = "2020-03-23";
 
   const [scrollEnabled, setScrollEnabled] = useState(false);
+  const handleGoToOptions = () => navigation.push("Options");
+  const handleGoToBaseCurrency = () => navigation.push("CurrencyList", { title: "Base Currency" });
+  const handleGoToQuoteCurrency = () => navigation.push("CurrencyList", { title: "Quote Currency" });
 
   return (
     <View style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor={colors.blue} />
       <SafeAreaView style={styles.header}>
-        <TouchableOpacity onPress={() => navigation.push("Options")}>
+        <TouchableOpacity onPress={handleGoToOptions}>
           <Entypo name="cog" size={32} color={colors.white} />
         </TouchableOpacity>
       </SafeAreaView>
@@ -87,18 +90,14 @@ export default ({ navigation }) => {
               style={styles.logoBackground}
               resizeMode="contain"
             />
-            <Image
-              source={logo}
-              style={styles.logo}
-              resizeMode="contain"
-            />
+            <Image source={logo} style={styles.logo} resizeMode="contain" />
           </View>
           <Text style={styles.textHeader}>Currency Converter</Text>
           <View style={styles.inputContainer}>
             <ConversionInput
               text={baseCurrency}
               value="123"
-              onButtonPress={() => alert("todo!")}
+              onButtonPress={handleGoToBaseCurrency}
               keyboardType="numeric"
               onChangeText={(text) => console.log("text", text)}
             />
@@ -106,7 +105,7 @@ export default ({ navigation }) => {
               text={quoteCurrency}
               value="123"
               editable={false}
-              onButtonPress={() => alert("todo!")}
+              onButtonPress={handleGoToQuoteCurrency}
             />
           </View>
           <Text style={styles.text}>
