@@ -71,8 +71,12 @@ export default ({ navigation }) => {
 
   const [scrollEnabled, setScrollEnabled] = useState(false);
   const handleGoToOptions = () => navigation.push("Options");
-  const handleGoToBaseCurrency = () => navigation.push("CurrencyList", { title: "Base Currency" });
-  const handleGoToQuoteCurrency = () => navigation.push("CurrencyList", { title: "Quote Currency" });
+  const handleGoToBaseCurrency = () => navigation.push("CurrencyList", { title: "Base Currency", active: baseCurrency });
+  const handleGoToQuoteCurrency = () =>
+    navigation.push("CurrencyList", {
+      title: "Quote Currency",
+      active: quoteCurrency,
+    });
 
   return (
     <View style={styles.container}>
